@@ -1,0 +1,70 @@
+/* layout.css */
+header.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(12, 15, 16, 0.92);
+  border-bottom: 1px solid var(--bd);
+}
+.nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.logo {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 1.1rem;
+}
+.logo b {
+  color: var(--web);
+}
+.menu {
+  display: flex;
+  gap: 4px;
+}
+.menu a {
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: var(--mu);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.menu a:hover {
+  color: var(--tx);
+  background: var(--sec);
+}
+.menu a[aria-current="page"] {
+  color: var(--tx);
+  box-shadow: inset 0 -2px 0 var(--tx);
+}
+.burger {
+  display: none;
+  background: none;
+  border: 1px solid var(--bd);
+  color: var(--tx);
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+footer {
+  border-top: 1px solid var(--bd);
+  padding: 40px 0;
+  color: var(--mu);
+  font-size: 0.9rem;
+}
+footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}

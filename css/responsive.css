@@ -1,0 +1,52 @@
+/* responsive.css */
+@media (max-width: 860px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--bg);
+    border-bottom: 1px solid var(--bd);
+    padding: 8px 20px 16px;
+  }
+  .menu.open {
+    display: flex;
+  }
+  .burger {
+    display: block;
+  }
+  .hero,
+  .pd,
+  .two {
+    grid-template-columns: 1fr;
+  }
+  .spec,
+  .wid,
+  .feat {
+    grid-template-columns: 1fr;
+  }
+  .feat .card:first-child {
+    grid-column: auto;
+  }
+  .feat .card:first-child .cv {
+    aspect-ratio: 16/10;
+  }
+  .wid > div + div {
+    border-left: 0;
+    border-top: 1px solid var(--bd);
+  }
+  .bar {
+    grid-template-columns: 1fr;
+  }
+  .rl a {
+    grid-template-columns: 1fr;
+  }
+  .tile:nth-child(2) {
+    margin-left: 0;
+  }
+  section {
+    padding: 48px 0;
+  }
+}
