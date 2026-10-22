@@ -1,10 +1,3 @@
-/*
-  PROJECT CONTENT + THUMBNAILS
-  To add a screenshot, put the image in assets/images/ and set image to its relative path, e.g.
-  image: 'assets/images/stockwise-dashboard.webp'
-  Leave image as '' to use the built-in category thumbnail. Use imageFit: 'contain' for full UI captures.
-  Replace only the placeholder # links when you have real demo/repository URLs.
-*/
 export const projects = [
   {
     id: 1,
@@ -83,7 +76,7 @@ export const projects = [
     type: "Proyek Pribadi",
     demo: "#",
     repo: "#",
-    image: "assets/images/clientflow.png",
+    image: "assets/images/clientFlow.png",
     imageAlt: "Pratinjau aplikasi ClientFlow CRM",
     imageFit: "cover",
   },
@@ -110,7 +103,7 @@ export const projects = [
     type: "Proyek Latihan",
     demo: "#",
     repo: "#",
-    image: "assets/images/Cititex.png",
+    image: "assets/images/CItitex.png",
     imageAlt: "Pratinjau website Cititex",
     imageFit: "cover",
   },
@@ -142,7 +135,6 @@ export const projects = [
   },
 
   // ====================================DESAIN DATAS====================================================
-  // 6 Ilustrasi Flat Vector 2D - Website Asset
 
   {
     id: 6,
@@ -167,7 +159,7 @@ export const projects = [
     type: "Personal Used",
     demo: "",
     repo: "",
-    image: "/assets/images/Illustration (1).jpg",
+    image: "/assets/images/illustration (1).jpg",
     imageAlt: "Flat vector illustration remote workspace cafe",
     imageFit: "cover",
   },
@@ -193,7 +185,7 @@ export const projects = [
     type: "Personal Used",
     demo: "",
     repo: "",
-    image: "/assets/images/Illustration (2).jpg",
+    image: "/assets/images/illustration (2).jpg",
     imageAlt: "Flat vector illustration delivery courier motorcycle",
     imageFit: "cover",
   },
@@ -220,7 +212,7 @@ export const projects = [
     type: "Personal Used",
     demo: "",
     repo: "",
-    image: "/assets/images/Illustration (5).jpg",
+    image: "/assets/images/illustration (5).jpg",
     imageAlt: "Flat vector illustration finance growth chart",
     imageFit: "cover",
   },
@@ -246,7 +238,7 @@ export const projects = [
     type: "Personal Used",
     demo: "",
     repo: "",
-    image: "/assets/images/Illustration (6).jpg",
+    image: "/assets/images/illustration (6).jpg",
     imageAlt: "Flat vector illustration team collaboration meeting",
     imageFit: "cover",
   },
@@ -272,7 +264,7 @@ export const projects = [
     type: "Personal Used",
     demo: "",
     repo: "",
-    image: "/assets/images/Illustration (3).jpg",
+    image: "/assets/images/illustration (3).jpg",
     imageAlt: "Flat vector illustration travel adventure mountain",
     imageFit: "cover",
   },
@@ -299,7 +291,7 @@ export const projects = [
     type: "Personal Used",
     demo: "",
     repo: "",
-    image: "/assets/images/Illustration (4).jpg",
+    image: "/assets/images/illustration (4).jpg",
     imageAlt: "Screenshot Illustration E-Commerce Shopping",
     imageFit: "cover",
   },

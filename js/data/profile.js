@@ -1,4 +1,3 @@
-// Edit this file to update the name, contact information, and social links.
 export const profile = {
   name: "Sandi Hadiansyah",
   alias: "Shadyans / isanSanusi",

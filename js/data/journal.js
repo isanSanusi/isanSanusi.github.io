@@ -1,4 +1,3 @@
-// Journal entries are edited here. Article content is plain text with paragraph breaks.
 export const journal = [
   {
     id: "j1",
