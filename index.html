@@ -1,80 +1,119 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shadyans | Portofolio & Journal</title>
-    <link rel="stylesheet" href="css/tokens.css" />
+    <meta name="theme-color" content="#101114" />
+    <meta
+      name="description"
+      content="Portfolio of Sandi Hadiansyah — web development, visual design, and data automation."
+    />
+    <title>Shadyans — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/pages.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <script type="module" src="js/main.js"></script>
   </head>
   <body>
-    <a
-      href="#app"
-      class="btn"
-      style="position: absolute; left: -999px"
-      onfocus="this.style.left = '8px'"
-      onblur="this.style.left = '-999px'"
-      >Lewati ke konten</a
-    >
-    <header class="nav">
-      <div class="wrap">
-        <a class="logo" href="#/" aria-label="Beranda">Shadyans</a>
-        <button
-          class="burger"
-          id="bg"
-          aria-expanded="false"
-          aria-controls="mn"
-          aria-label="Buka menu"
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#/" aria-label="Shadyans home"
+          ><span class="brand-mark">s.</span
+          ><span data-profile="logo">shadyans.dev</span></a
         >
-          ☰
+        <button
+          class="mobile-menu-button icon-button"
+          id="menu-toggle"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
         </button>
-        <nav class="menu" id="mn" aria-label="Utama">
-          <a href="#/" data-r="home">Home</a
-          ><a href="#/portfolio" data-r="portfolio">Portfolio</a
-          ><a href="#/journal" data-r="journal">Journal</a
-          ><a href="#/about" data-r="about">About</a
-          ><a href="#/contact" data-r="contact">Contact</a>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a href="#/" data-route-link="/">Home</a
+          ><a href="#/portfolio" data-route-link="/portfolio">Portfolio</a
+          ><a href="#/journal" data-route-link="/journal">Journal</a
+          ><a href="#/about" data-route-link="/about">About</a>
+          <a class="nav-contact" href="#/contact" data-route-link="/contact"
+            >Let's talk <span aria-hidden="true">↗</span></a
+          >
+          <button
+            id="theme-toggle"
+            class="icon-button theme-toggle"
+            aria-label="Switch color theme"
+            title="Switch color theme"
+          >
+            <span class="theme-icon">☼</span>
+          </button>
         </nav>
-      </div>
-    </header>
-    <main id="app" tabindex="-1"></main>
-    <footer>
-      <div class="wrap">
-        <div>
-          <strong style="color: var(--tx)">Shadyans</strong><br />Web ini adalah
-          Portofolio tempat saya menyimpan Portofolio &amp; Tulisan saya.<br />©
-          <span id="yr"></span> Sandi Hadiansyah
+      </header>
+      <main id="app" tabindex="-1" aria-live="polite"></main>
+      <footer class="site-footer">
+        <a class="brand footer-brand" href="#/"
+          ><span class="brand-mark">s.</span
+          ><span data-profile="logo">shadyans.dev</span></a
+        >
+        <p>Independent builder. Practical systems, thoughtful interfaces.</p>
+        <div class="footer-links">
+          <a
+            data-profile-link="github"
+            href="https://github.com/isanSanusi"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub ↗</a
+          ><a
+            data-profile-link="behance"
+            href="https://behance.net"
+            target="_blank"
+            rel="noreferrer"
+            >Behance ↗</a
+          ><a
+            data-profile-link="linkedin"
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn ↗</a
+          >
         </div>
-        <nav aria-label="Footer">
-          <a href="#/portfolio">Portfolio</a>
-          <a href="#/journal">Journal</a>
-          <a href="#/about">About</a>
-          <a href="#/contact">Contact</a>
-        </nav>
-        <nav aria-label="Sosial">
-          <a href="#/contact">GitHub</a>
-          <a href="#/contact">Behance</a>
-          <a href="#/contact">LinkedIn</a>
-        </nav>
-      </div>
-    </footer>
-
-    <script src="js/data/site.js"></script>
-    <script src="js/data/projects.js"></script>
-    <script src="js/data/articles.js"></script>
-    <script src="js/utils.js"></script>
-    <script src="js/views/home.js"></script>
-    <script src="js/views/portfolio.js"></script>
-    <script src="js/views/project.js"></script>
-    <script src="js/views/about.js"></script>
-    <script src="js/views/journal.js"></script>
-    <script src="js/views/contact.js"></script>
-    <script src="js/views/notfound.js"></script>
-    <script src="js/router.js"></script>
-    <script src="js/main.js"></script>
+        <span class="copyright">© <span id="year"></span> Shadyans</span>
+      </footer>
+    </div>
+    <dialog
+      id="project-dialog"
+      class="project-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <button
+        class="dialog-close icon-button"
+        data-close-dialog
+        aria-label="Close project details"
+      >
+        ×
+      </button>
+      <div id="dialog-content"></div>
+    </dialog>
+    <dialog
+      id="article-dialog"
+      class="project-dialog article-dialog"
+      aria-labelledby="article-dialog-title"
+    >
+      <button
+        class="dialog-close icon-button"
+        data-close-dialog
+        aria-label="Close article"
+      >
+        ×
+      </button>
+      <div id="article-dialog-content"></div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
   </body>
 </html>

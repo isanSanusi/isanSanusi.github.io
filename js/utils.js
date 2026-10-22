@@ -26,5 +26,13 @@ function cover(c, k = 0) {
   return `<svg viewBox="0 0 320 200" role="img" aria-label="Ilustrasi placeholder tabel dan grafik"><rect x="40" y="36" width="240" height="24" fill="currentColor" opacity=".25"/>${r}<path d="M110 36v144M180 36v144" stroke="currentColor" stroke-opacity=".3"/><rect x="52" y="${150 - o * 6}" width="14" height="${26 + o * 6}" fill="currentColor"/><rect x="122" y="${120}" width="14" height="56" fill="currentColor" opacity=".6"/><rect x="192" y="${100 + o * 8}" width="14" height="${76 - o * 8}" fill="currentColor"/></svg>`;
 }
 const card = (p) =>
-  `<a class="card" data-cat="${p.category}" href="#/project/${p.slug}"><div class="cv">${cover(p.category, p.id)}</div><div class="cb">${tag(p.category)}<span class="demo">Demo</span><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p></div></a>`;
+  `
+<a class="card" data-cat="${p.category}" href="#/project/${p.slug}">
+  <div class="cv">${cover(p.category, p.id)}</div>
+  <div class="cb">${tag(p.category)}
+    <span class="status">Published</span>
+    <h3>${esc(p.title)}</h3>
+    <p>${esc(p.description)}</p>
+  </div>
+</a>`;
 const byNew = (a, b) => b.publishedAt.localeCompare(a.publishedAt);

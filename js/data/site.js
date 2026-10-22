@@ -1,7 +1,7 @@
 /* Konten situs & kategori (ganti identitas di sini) */
 const SITE = {
-  name: "Nama Anda",
-  email: "halo@contoh.com",
+  name: "shadyans",
+  email: "isan0439@gmail.com",
   headline:
     'I <em>build things</em>, create <span class="d">visuals</span>, and turn <span class="x">data</span> into something useful.',
   intro:
@@ -11,7 +11,7 @@ const SITE = {
 const CATS = {
   web: {
     n: "Web Development",
-    ic: "</>",
+    ic: "",
     d: "Situs dan aplikasi web yang cepat, jelas, dan mudah dirawat.",
     w: [
       "Landing page & situs profil",

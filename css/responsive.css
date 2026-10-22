@@ -1,52 +1,202 @@
-/* responsive.css */
-@media (max-width: 860px) {
-  .menu {
+@media (max-width: 900px) {
+  .hero {
+    gap: 30px;
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .about-layout,
+  .contact-layout {
+    gap: 35px;
+  }
+  .site-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-links {
+    grid-column: 1;
+  }
+  .copyright {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: right;
+  }
+  .main-nav {
+    gap: 17px;
+  }
+  .service-item {
+    padding-inline: 12px;
+  }
+}
+@media (max-width: 680px) {
+  .site-shell {
+    width: min(calc(100% - 32px), var(--max));
+  }
+  .site-header {
+    height: 70px;
+  }
+  .mobile-menu-button {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .mobile-menu-button span {
+    display: block;
+    width: 15px;
+    height: 1px;
+    background: var(--text);
+  }
+  .main-nav {
     display: none;
     position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    flex-direction: column;
+    top: 69px;
+    left: -16px;
+    right: -16px;
+    padding: 18px 20px 22px;
+    border-bottom: 1px solid var(--line);
     background: var(--bg);
-    border-bottom: 1px solid var(--bd);
-    padding: 8px 20px 16px;
+    align-items: stretch;
+    gap: 0;
+    flex-direction: column;
   }
-  .menu.open {
+  .main-nav.open {
     display: flex;
   }
-  .burger {
-    display: block;
+  .main-nav > a {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
   }
-  .hero,
-  .pd,
-  .two {
+  .main-nav .nav-contact {
+    margin-top: 12px;
+    padding: 12px 14px;
+    text-align: center;
+    border: 0;
+  }
+  .theme-toggle {
+    margin-top: 12px;
+    align-self: flex-start;
+  }
+  .hero {
+    padding: 55px 0 48px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero h1 {
+    font-size: clamp(2.8rem, 13vw, 4.6rem);
+  }
+  .hero-copy {
+    font-size: 14px;
+  }
+  .hero-visual {
+    min-height: 310px;
+  }
+  .orbit-card {
+    width: min(100%, 330px);
+  }
+  .floating-label {
+    right: 0;
+    top: 25px;
+  }
+  .service-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+  .service-item {
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .service-item:nth-child(2) {
+    border-right: 0;
+  }
+  .service-item:nth-child(3),
+  .service-item:nth-child(4) {
+    border-bottom: 0;
+  }
+  .service-item:first-child {
+    padding-left: 10px;
+  }
+  .section {
+    padding: 52px 0;
+  }
+  .section-head {
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .project-grid,
+  .journal-grid {
     grid-template-columns: 1fr;
   }
-  .spec,
-  .wid,
-  .feat {
+  .project-card-body {
+    padding: 16px;
+  }
+  .project-thumb {
+    aspect-ratio: 1.7;
+  }
+  .page-intro {
+    padding: 45px 0 10px;
+  }
+  .portfolio-toolbar {
+    align-items: stretch;
+  }
+  .toolbar-controls {
+    width: 100%;
+  }
+  .toolbar-controls .field {
+    flex: 1;
+    min-width: 0;
+  }
+  .about-layout,
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .about-aside {
+    position: static;
+  }
+  .timeline-item {
+    grid-template-columns: 105px 1fr;
+    gap: 12px;
+  }
+  .skill-groups {
     grid-template-columns: 1fr;
   }
-  .feat .card:first-child {
+  .contact-form {
+    padding: 18px;
+  }
+  .form-grid,
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .footer-links,
+  .copyright {
     grid-column: auto;
+    grid-row: auto;
+    text-align: left;
   }
-  .feat .card:first-child .cv {
-    aspect-ratio: 16/10;
+  .project-dialog {
+    padding: 20px;
   }
-  .wid > div + div {
-    border-left: 0;
-    border-top: 1px solid var(--bd);
+  .stat-row {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
   }
-  .bar {
-    grid-template-columns: 1fr;
+  .stat {
+    padding: 12px;
   }
-  .rl a {
-    grid-template-columns: 1fr;
+  .stat strong {
+    font-size: 22px;
   }
-  .tile:nth-child(2) {
-    margin-left: 0;
-  }
-  section {
-    padding: 48px 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
   }
 }
